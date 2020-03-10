@@ -2,13 +2,14 @@ package com.curso.bddcucumber.servicos;
 
 import com.curso.bddcucumber.entidades.Filme;
 import com.curso.bddcucumber.entidades.NotaAluguel;
+import com.curso.bddcucumber.entidades.TipoAluguel;
 import com.curso.bddcucumber.utils.DateUtils;
 
 import java.util.Calendar;
 
 public class AluguelService {
 
-    public NotaAluguel alugar(Filme filme, String tipoAluguel) {
+    public NotaAluguel alugar(Filme filme, TipoAluguel tipoAluguel) {
         if (filme.getEstoque() == 0) {
             throw new RuntimeException("Filme sem estoque");
         }
@@ -18,7 +19,7 @@ public class AluguelService {
         nota.setDataEntrega(DateUtils.obterDataDiferencaDias(1));
         nota.setPontuacao(1);
 
-        if ("extendido".equals(tipoAluguel)) {
+        if (TipoAluguel.EXTENDIDO.equals(tipoAluguel)) {
             nota.setPreco(filme.getAluguel() * 2);
             nota.setDataEntrega(DateUtils.obterDataDiferencaDias(3));
             nota.setPontuacao(2);
