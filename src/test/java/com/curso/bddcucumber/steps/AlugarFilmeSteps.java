@@ -5,10 +5,10 @@ import com.curso.bddcucumber.entidades.NotaAluguel;
 import com.curso.bddcucumber.entidades.TipoAluguel;
 import com.curso.bddcucumber.servicos.AluguelService;
 import com.curso.bddcucumber.utils.DateUtils;
-import cucumber.api.DataTable;
-import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 
 import java.text.DateFormat;

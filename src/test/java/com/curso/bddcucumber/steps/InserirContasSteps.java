@@ -1,10 +1,10 @@
 package com.curso.bddcucumber.steps;
 
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
+import io.cucumber.core.api.Scenario;
+import io.cucumber.java.After;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Quando;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -113,7 +113,7 @@ public class InserirContasSteps {
      * Hooks
      */
     @After(order = 1)
-    // @After(order = 1, value = {"~@unitários"}) // Faz com que esse Hook não execute nos cenários que estiverem com a tag @unitários
+    // @After(order = 1, value = "~@unitários") // Faz com que esse Hook não execute nos cenários que estiverem com a tag @unitários
     public void screenshot(Scenario cenario) throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File("target/screenshot/" + cenario.getId() + ".jpg"));

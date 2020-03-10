@@ -1,10 +1,8 @@
 package com.curso.bddcucumber.steps;
 
-import com.curso.bddcucumber.converters.DateConverter;
-import cucumber.api.Transform;
-import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 
 import java.text.DateFormat;
@@ -48,8 +46,9 @@ public class AprenderCucumberSteps {
 
     Date entrega = new Date();
 
-    @Dado("^que a entrega é dia (.*)$")
-    public void que_a_entrega_é_dia(@Transform(DateConverter.class) Date date) throws Throwable {
+    // Parametro data criado no RegistryCucumber
+    @Dado("que a entrega é dia {data}")
+    public void que_a_entrega_é_dia(Date date) throws Throwable {
         entrega = date;
     }
 

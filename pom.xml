@@ -43,18 +43,16 @@
 			</exclusions>
 		</dependency>
 
-		<!-- Nova versao o groupId é io.cucumber -->
 		<dependency>
-			<groupId>info.cukes</groupId>
+			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
+			<version>4.8.0</version>
 		</dependency>
 
-		<!-- Nova versao o groupId é io.cucumber -->
 		<dependency>
-			<groupId>info.cukes</groupId>
+			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
+			<version>4.8.0</version>
 			<scope>test</scope>
 		</dependency>
 
