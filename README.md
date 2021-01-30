@@ -1,2 +1,2 @@
 # bdd-cucumber
-Curso de BDD com Cucumber
+BDD + Cucumber
