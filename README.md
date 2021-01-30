@@ -1,2 +1,2 @@
 # bdd-cucumber
-BDD - Cucumber - Gerkin
+BDD - Cucumber - Gherkin
